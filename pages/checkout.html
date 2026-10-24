@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-shop">
+
+<div class="announce-bar">
+  <marquee>Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+</div>
+
+<nav class="global-nav">
+  <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+    <a href="about.html">About</a>
+    <a href="categories.html">Shop</a>
+    <a href="forms.html">Portal</a>
+    <a href="forms.html#user-login">Log-in/Sign-up</a>
+    <a href="orders.html">Orders</a>
+    <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+      <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+    </form>
+    <div class="nav-cart" id="navCart">
+      <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+        <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+        <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+      </button>
+      <div class="nav-cart-dropdown" id="navCartDropdown">
+        <h4>Your Cart</h4>
+        <ul class="nav-cart-items" id="navCartItems">
+          <li class="nav-cart-empty">Your cart is empty.</li>
+        </ul>
+        <div class="nav-cart-footer">
+          <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+          <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+<div class="sf co"><a class="back-link" href="cart.html">&larr; Back to cart</a><h2>Checkout</h2>
+<p class="sf-sub">Delivery details, payment method and order review. We deliver to NCR and Batangas.</p>
+<div class="sf-card" id="coEmpty" hidden><h3>Your cart is empty</h3><p>Add something before checking out.</p><a class="sf-btn" href="categories.html">Continue shopping</a></div>
+<form id="coForm" novalidate><div class="sf-grid" id="coMain"><div class="co-col">
+
+<section class="co-sec" aria-labelledby="coDel"><h3 id="coDel">Delivery</h3>
+<div class="co-toggle" role="radiogroup" aria-label="Delivery method">
+<label class="co-tab"><input type="radio" name="deliveryMode" value="deliver" checked><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8l9-5 9 5v9l-9 5-9-5V8z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg> Deliver It</span></label>
+<label class="co-tab"><input type="radio" name="deliveryMode" value="pickup"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg> Pick It Up</span></label>
+</div>
+<div class="co-fields">
+<div class="fl co-full"><input type="text" id="f-email" name="email" placeholder=" " inputmode="email" autocomplete="email"><label for="f-email">Email Address <span class="opt">(optional)</span></label><p class="err" id="e-email" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-firstName" name="firstName" placeholder=" " autocomplete="given-name"><label for="f-firstName">First Name <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-firstName" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-lastName" name="lastName" placeholder=" " autocomplete="family-name"><label for="f-lastName">Last Name <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-lastName" role="alert" hidden></p></div>
+<div class="co-full"><div class="fl "><input type="text" id="f-mobile" name="mobile" placeholder=" " inputmode="tel" autocomplete="tel"><label for="f-mobile">Mobile Number <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-mobile" role="alert" hidden></p></div><p class="co-hint">A rider may contact you to confirm delivery.</p></div>
+<div class="co-addr" id="addrFields">
+<div class="fl"><select id="f-region" name="region"><option value="">Select Region</option><option>NCR</option><option>Batangas</option></select><label for="f-region">Region <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-region" role="alert" hidden></p></div>
+<div class="fl"><select id="f-city" name="city" disabled><option value="">Select Region first</option></select><label for="f-city">City / Municipality <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-city" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-barangay" name="barangay" placeholder=" " ><label for="f-barangay">Barangay <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-barangay" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-houseNumber" name="houseNumber" placeholder=" " ><label for="f-houseNumber">House / Unit Number <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-houseNumber" role="alert" hidden></p></div>
+<div class="fl co-full"><input type="text" id="f-street" name="street" placeholder=" " ><label for="f-street">Street <span class="req" aria-hidden="true">*</span></label><p class="err" id="e-street" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-building" name="building" placeholder=" " ><label for="f-building">Building / Subdivision <span class="opt">(optional)</span></label><p class="err" id="e-building" role="alert" hidden></p></div>
+<div class="fl "><input type="text" id="f-postalCode" name="postalCode" placeholder=" " inputmode="numeric" maxlength="4"><label for="f-postalCode">Postal Code <span class="opt">(optional)</span></label><p class="err" id="e-postalCode" role="alert" hidden></p></div>
+</div>
+<div class="co-full" id="pickupInfo" hidden><div class="co-info"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v6M12 16.2v.3"/></svg><p id="pickupNote"></p></div></div>
+<div class="fl co-full"><textarea id="f-instructions" name="instructions" rows="2" placeholder=" "></textarea><label for="f-instructions">Delivery / Order Notes <span class="opt">(optional)</span></label></div>
+</div></section>
+
+<section class="co-sec" aria-labelledby="coShipH"><h3 id="coShipH">Shipping</h3>
+<div class="co-info" id="shipInfo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v6M12 16.2v.3"/></svg><p id="shipInfoText"></p></div>
+<div class="co-ship"><span id="shipName">Standard Delivery</span><span id="shipPrice" class="co-ship-price"></span></div>
+</section>
+
+<section class="co-sec" aria-labelledby="coPayH"><h3 id="coPayH">Payment</h3>
+<p class="co-lead" id="promoLead">Have a promo code?</p>
+<div class="co-promo"><div class="fl"><input type="text" id="promoCode" placeholder=" " autocomplete="off" autocapitalize="characters"><label for="promoCode">Promo</label></div><button type="button" class="co-apply" id="promoBtn">Apply</button></div>
+<p class="co-hint" id="promoMsg" role="status">Limit 1 promo per order.</p>
+<div id="payOpts" role="radiogroup" aria-label="Payment method"></div><p class="err" id="e-payment" role="alert" hidden></p>
+<div class="demo-note" id="demoNote" hidden></div></section>
+
+<p class="co-terms">By clicking Place Order, you agree to the LikhaLuntian <a href="about.html#terms">Terms and Conditions</a>.</p>
+<button type="submit" class="sf-btn co-place">Place Order</button><p class="err" id="coMsg" role="alert" hidden></p>
+</div>
+
+<aside class="sf-card sf-sum co-sum" aria-labelledby="coH"><h3 id="coH">Order Summary</h3>
+<div class="sf-line"><span>Subtotal</span><span id="coSub"></span></div>
+<div class="sf-line" id="coDiscRow" hidden><span id="coDiscLabel">Discount</span><span id="coDisc"></span></div>
+<div class="sf-line"><span>Shipping</span><span id="coShip"></span></div>
+<div class="co-free"><p id="freeText"></p><div class="co-bar" id="freeBarWrap" hidden><i id="freeBar"></i></div></div>
+<div class="sf-line sf-total"><span>Total</span><span id="coTotal"></span></div>
+<div id="coItems" class="co-items"></div>
+<a class="sf-btn out" style="width:100%;margin-top:10px" href="cart.html">Edit cart</a></aside>
+</div></form></div>
+</main>
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+<script src="../js/script.js"></script>
+</body>
+</html>

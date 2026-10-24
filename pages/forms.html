@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maker & Shopper Portal - LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-forms">
+
+<p class="skip-link go-to-bottom"><a href="#btm">&darr; Go to bottom</a></p>
+<div class="announce-bar">
+  <marquee>Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+</div>
+
+<nav class="global-nav">
+  <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+    <a href="about.html">About</a>
+    <a href="categories.html">Shop</a>
+    <a href="forms.html">Portal</a>
+    <a href="forms.html#user-login">Log-in/Sign-up</a>
+    <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+      <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+    </form>
+    <div class="nav-cart" id="navCart">
+      <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+        <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+        <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+      </button>
+      <div class="nav-cart-dropdown" id="navCartDropdown">
+        <h4>Your Cart</h4>
+        <ul class="nav-cart-items" id="navCartItems">
+          <li class="nav-cart-empty">Your cart is empty.</li>
+        </ul>
+        <div class="nav-cart-footer">
+          <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+          <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <article>
+    <a class="back-link" href="homepage.html">&larr; Back to home</a>
+    <h2>Maker & Shopper Portal</h2>
+    <p>Select what you need below.</p>
+
+    <!-- Portal selector: pick a card to jump to that section only -->
+    <nav class="portal-menu portal-grid" aria-label="Portal sections">
+      <a class="portal-tile" href="#user-login">
+        <span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        <h3>User Login / Sign-up</h3>
+        <p>Log in to track your orders and save favorites, or join LikhaLuntian.</p>
+      </a>
+      <a class="portal-tile" href="#maker-login">
+        <span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M4 12v8h16v-8"/><path d="M10 20v-5h4v5"/></svg></span>
+        <h3>Maker Login</h3>
+        <p>Access your dashboard to manage orders and inventory.</p>
+      </a>
+      <a class="portal-tile" href="#upload-products">
+        <span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></span>
+        <h3>Upload Product Photos</h3>
+        <p>Add high-quality images to showcase your handcrafted goods.</p>
+      </a>
+      <a class="portal-tile" href="#stock-calculator">
+        <span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"/></svg></span>
+        <h3>Stock Value Calculator</h3>
+        <p>Estimate the total value of your inventory before listing.</p>
+      </a>
+      <a class="portal-tile" href="#shopper-requests">
+        <span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h3>Shopper Requests &amp; Suggestions</h3>
+        <p>Request a product or suggest a local maker we should feature.</p>
+      </a>
+    </nav>
+
+    <!-- SECTION 0: USER LOGIN / SIGN-UP (card layout) -->
+    <section class="portal-section auth-card" id="user-login" aria-labelledby="userLoginHeading">
+      <a class="auth-close" href="#" aria-label="Back to Portal Menu" title="Back to Portal Menu">&times;</a>
+      <img class="auth-logo" src="../assets/logo.png" alt="LikhaLuntian">
+      <h3 id="userLoginHeading">Welcome to LikhaLuntian</h3>
+      <p class="auth-sub">Log in to track orders and save favorites</p>
+      <form method="GET" action="http://localhost/echo.py">
+        <div class="auth-field">
+          <label for="userEmail">Email</label>
+          <input type="email" id="userEmail" name="Name" placeholder="Email" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="userPassword">Password</label>
+          <div class="auth-input-wrap">
+            <input type="password" id="userPassword" name="Pwd" placeholder="Password" autocomplete="current-password" required>
+            <button type="button" class="auth-eye" data-toggle-password aria-label="Show password" aria-pressed="false">
+              <svg class="eye-open" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-shut" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.9 10.9 0 0 1 12 19C5 19 1 12 1 12a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9.1 9.1 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19M1 1l22 22"/></svg>
+            </button>
+          </div>
+        </div>
+        <input type="submit" name="Form" value="Log In" class="btn-submit auth-btn">
+        <p class="auth-or"><span>OR</span></p>
+        <input type="submit" name="Form" value="Sign Up" class="btn-submit auth-btn auth-btn-secondary" formnovalidate>
+      </form>
+      <p class="auth-fine">By continuing, you agree to LikhaLuntian's <a href="about.html#terms">Terms and Conditions</a>.</p>
+    </section>
+
+    <!-- SECTION 1: MAKER LOGIN -->
+    <section class="portal-section auth-card" id="maker-login" aria-labelledby="makerLoginHeading">
+      <a class="auth-close" href="#" aria-label="Back to Portal Menu" title="Back to Portal Menu">&times;</a>
+      <img class="auth-logo" src="../assets/logo.png" alt="LikhaLuntian">
+      <h3 id="makerLoginHeading">Maker Login</h3>
+      <p class="auth-sub">Manage your orders and inventory</p>
+      <form method="GET" action="http://localhost/echo.py">
+        <div class="auth-field">
+          <label for="makerEmail">Maker ID / Email</label>
+          <input type="text" id="makerEmail" name="Name" placeholder="Enter your registered email" autocomplete="username" required>
+        </div>
+        <div class="auth-field">
+          <label for="makerPassword">Password</label>
+          <div class="auth-input-wrap">
+            <input type="password" id="makerPassword" name="Pwd" placeholder="Enter your password" autocomplete="current-password" required>
+            <button type="button" class="auth-eye" data-toggle-password aria-label="Show password" aria-pressed="false">
+              <svg class="eye-open" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-shut" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.9 10.9 0 0 1 12 19C5 19 1 12 1 12a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9.1 9.1 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19M1 1l22 22"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="makerZip">Business Zip Code</label>
+          <input type="text" id="makerZip" name="Zip" maxlength="5" inputmode="numeric" placeholder="e.g., 4200" autocomplete="postal-code">
+        </div>
+        <input type="submit" name="Form" value="Login to Dashboard" class="btn-submit auth-btn">
+      </form>
+    </section>
+
+    <!-- SECTION 2: PRODUCT UPLOAD -->
+    <section class="portal-section auth-card" id="upload-products" aria-labelledby="uploadHeading">
+      <a class="auth-close" href="#" aria-label="Back to Portal Menu" title="Back to Portal Menu">&times;</a>
+      <img class="auth-logo" src="../assets/logo.png" alt="LikhaLuntian">
+      <h3 id="uploadHeading">Upload Product Photos</h3>
+      <p class="auth-sub">Add high-quality images to showcase your handcrafted goods</p>
+      <form method="POST" action="http://localhost/upload.py" enctype="multipart/form-data">
+        <div class="auth-field">
+          <label for="uploadFile">Product photo</label>
+          <input type="file" id="uploadFile" name="Upload" accept="image/*" class="file-input" required>
+        </div>
+        <input type="submit" value="Upload to LikhaLuntian" class="btn-submit auth-btn">
+      </form>
+    </section>
+
+    <!-- SECTION 2b: STOCK VALUE CALCULATOR
+         Demonstrates: datalist, date input, multiplication() from script.js -->
+    <section class="portal-section auth-card" id="stock-calculator" aria-labelledby="stockHeading">
+      <a class="auth-close" href="#" aria-label="Back to Portal Menu" title="Back to Portal Menu">&times;</a>
+      <img class="auth-logo" src="../assets/logo.png" alt="LikhaLuntian">
+      <h3 id="stockHeading">Stock Value Calculator</h3>
+      <p class="auth-sub">Estimate the total value of your inventory before listing</p>
+      <form method="GET" action="http://localhost/echo.py" id="stockForm">
+        <div class="auth-field">
+          <label for="stockName">Product Name</label>
+          <input type="text" id="stockName" name="ProductName" list="product-suggestions" placeholder="e.g., Bamboo Toothbrush Set">
+          <datalist id="product-suggestions">
+            <option value="Bamboo Toothbrush Set">
+            <option value="Rattan Storage Boxes">
+            <option value="Abaca Fiber Bag">
+            <option value="Reusable Tote Bag">
+            <option value="Wooden Comb">
+            <option value="Soy Wax Candles">
+            <option value="Bamboo Pens Set">
+            <option value="Organic Fertilizer">
+            <option value="Natural Handmade Soap">
+            <option value="Reusable Straw Set">
+          </datalist>
+        </div>
+        <div class="auth-row">
+          <div class="auth-field">
+            <label for="unitPrice">Unit Price (₱)</label>
+            <input type="number" id="unitPrice" name="UnitPrice" min="0" step="0.01" placeholder="e.g., 150" inputmode="decimal" required>
+          </div>
+          <div class="auth-field">
+            <label for="stockQty">Stock Quantity</label>
+            <input type="number" id="stockQty" name="StockQty" min="0" step="1" placeholder="e.g., 40" inputmode="numeric" required>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="restockDate">Restock Target Date <span class="opt">(optional)</span></label>
+          <input type="date" id="restockDate" name="RestockDate">
+        </div>
+        <input type="submit" value="Calculate Stock Value" class="btn-submit auth-btn">
+        <p id="stockResult" class="auth-result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- SECTION 3: REQUESTS & SUGGESTIONS -->
+    <section class="portal-section auth-card" id="shopper-requests" aria-labelledby="requestsHeading">
+      <a class="auth-close" href="#" aria-label="Back to Portal Menu" title="Back to Portal Menu">&times;</a>
+      <img class="auth-logo" src="../assets/logo.png" alt="LikhaLuntian">
+      <h3 id="requestsHeading">Shopper Requests &amp; Suggestions</h3>
+      <p class="auth-sub">Can't find what you need? Suggest a product or a local maker</p>
+      <form method="POST" action="http://localhost/feedback.py">
+        <div class="auth-field">
+          <label for="requestType">Type of Request</label>
+          <select id="requestType" name="RequestType" class="form-select">
+            <optgroup label="Product Requests">
+              <option value="product">Request a New Product</option>
+              <option value="restock">Request a Restock</option>
+            </optgroup>
+            <optgroup label="Maker Suggestions">
+              <option value="maker">Suggest a Local Maker</option>
+              <option value="collab">Suggest a Collaboration</option>
+            </optgroup>
+            <optgroup label="Website &amp; Other">
+              <option value="website">Website Feedback</option>
+              <option value="other">Other</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="auth-field">
+          <label for="requestMessage">Your Message / Suggestion</label>
+          <textarea id="requestMessage" name="Message" rows="5" placeholder="Tell us more about your request or suggestion..." class="form-textarea" required></textarea>
+        </div>
+        <input type="submit" value="Send to LikhaLuntian" class="btn-submit auth-btn">
+      </form>
+    </section>
+
+  </article>
+</main>
+
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+      <div class="social-map-wrap footer-social">
+        <img src="../assets/social-icons.png" alt="Social media icons" class="social-map">
+        <a class="social-hotspot hotspot-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"></a>
+        <a class="social-hotspot hotspot-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"></a>
+        <a class="social-hotspot hotspot-contact" href="about.html#contact" title="Call or contact us" aria-label="Call or contact us"></a>
+        <a class="social-hotspot hotspot-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"></a>
+        <a class="social-hotspot hotspot-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok"></a>
+        <a class="social-hotspot hotspot-x" href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X" aria-label="X"></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

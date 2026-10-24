@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Orders - LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-shop">
+
+<div class="announce-bar">
+  <marquee>Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+</div>
+
+<nav class="global-nav">
+  <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+    <a href="about.html">About</a>
+    <a href="categories.html">Shop</a>
+    <a href="forms.html">Portal</a>
+    <a href="forms.html#user-login">Log-in/Sign-up</a>
+    <a href="orders.html">Orders</a>
+    <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+      <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+    </form>
+    <div class="nav-cart" id="navCart">
+      <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+        <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+        <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+      </button>
+      <div class="nav-cart-dropdown" id="navCartDropdown">
+        <h4>Your Cart</h4>
+        <ul class="nav-cart-items" id="navCartItems">
+          <li class="nav-cart-empty">Your cart is empty.</li>
+        </ul>
+        <div class="nav-cart-footer">
+          <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+          <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main><div class="sf"><a class="back-link" href="categories.html">&larr; Continue shopping</a><h2 tabindex="-1">My Orders</h2><p class="sf-sub">Order history and tracking. Orders are saved on this device.</p><div id="ordersHost"></div></div></main>
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+<script src="../js/script.js"></script>
+</body>
+</html>

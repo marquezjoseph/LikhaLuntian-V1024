@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="1000; url=homepage.html">
+  <title>LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-hero">
+
+<p class="skip-link go-to-bottom"><a href="#btm">&darr; Go to bottom</a></p>
+
+  <!-- =========================================================
+       Announcement bar
+       ========================================================= -->
+  <div class="announce-bar">
+    <marquee>
+      Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+  </div>
+
+  <!-- =========================================================
+       Global navigation
+       ========================================================= -->
+  <nav class="global-nav">
+    <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+      <a href="about.html">About</a>
+      <a href="categories.html">Shop</a>
+      <a href="forms.html">Portal</a>
+      <a href="forms.html#user-login">Log-in/Sign-up</a>
+      <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+        <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+        <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+      </form>
+      <div class="nav-cart" id="navCart">
+        <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+          <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+          <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+        </button>
+        <div class="nav-cart-dropdown" id="navCartDropdown">
+          <h4>Your Cart</h4>
+          <ul class="nav-cart-items" id="navCartItems">
+            <li class="nav-cart-empty">Your cart is empty.</li>
+          </ul>
+          <div class="nav-cart-footer">
+            <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+            <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       Hero banner (claymorphism): copy on the left, the rotating banner
+       images inside the tall rounded box on the right.
+       The box keeps id="image-slideshow" + .slide / .is-active, so
+       script.js still rotates the images every 3 seconds.
+       ========================================================= -->
+  <section class="hero-clay" aria-label="Welcome to LikhaLuntian">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Handmade by Filipino makers</p>
+        <h1 class="hero-title">Shop sustainably.<br>Support local.</h1>
+        <p class="hero-text">Discover low-waste, handmade products from Filipino makers. Every maker is vetted by hand and every order ships with care.</p>
+        <div class="hero-actions">
+          <a class="hero-btn" href="categories.html">Shop now <span aria-hidden="true">&rarr;</span></a>
+          <a class="hero-btn hero-btn-alt" href="about.html">Learn more</a>
+        </div>
+        <ul class="hero-feats">
+          <li>
+            <span class="hero-feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <strong>Vetted makers</strong><span>Checked by hand</span>
+          </li>
+          <li>
+            <span class="hero-feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-4 6-6 9-8"/></svg></span>
+            <strong>Low-waste</strong><span>Ships plastic-free</span>
+          </li>
+          <li>
+            <span class="hero-feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <strong>Local delivery</strong><span>Free in Balayan over ₱1,500</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="image-slideshow hero-visual" id="image-slideshow" aria-label="Featured LikhaLuntian banners">
+        <img src="../assets/download-now.png" alt="Download the LikhaLuntian app" class="slide is-active">
+        <img src="../assets/visit-banner.png" alt="Visit LikhaLuntian" class="slide">
+        <img src="../assets/intro-banner.png" alt="Introduction to LikhaLuntian" class="slide">
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       Categories
+       ========================================================= -->
+  <article id="categories">
+    <h2>Choose what you need:</h2>
+    <p>Browse LikhaLuntian products grouped by what you need. Each category features a different pick of makers.</p>
+
+    <div class="chip-row">
+      <a class="chip" href="category-personal-care.html"><span class="chip-tag">Natural</span>Personal Care</a>
+      <a class="chip" href="category-bags-accessories.html"><span class="chip-tag">Reusable</span>Bags &amp; Accessories</a>
+      <a class="chip" href="category-home-products.html"><span class="chip-tag">Low-Waste</span>Home Products</a>
+      <a class="chip" href="category-gardening-plants.html"><span class="chip-tag">Organic</span>Gardening &amp; Plants</a>
+      <a class="chip" href="category-school-office.html"><span class="chip-tag">Recycled</span>School &amp; Office</a>
+    </div>
+
+    <div class="category-grid category-grid-tiles">
+      <a class="category-card tile-light" href="category-personal-care.html">
+        <div class="tile-text">
+          <h3>Personal Care</h3>
+          <p>Natural self-care essentials like wooden combs, bamboo toothbrushes, and handmade soap.</p>
+          <span class="tile-actions"><span class="tile-btn">Shop now</span><span class="tile-btn tile-btn-outline">Natural</span></span>
+        </div>
+        <img src="../assets/category-personal-care.svg" alt="Personal Care">
+      </a>
+      <a class="category-card tile-dark" href="category-bags-accessories.html">
+        <div class="tile-text">
+          <h3>Bags and Accessories</h3>
+          <p>Reusable abaca bags, paper bags, and everyday totes made by local artisans.</p>
+          <span class="tile-actions"><span class="tile-btn">Shop now</span><span class="tile-btn tile-btn-outline">Reusable</span></span>
+        </div>
+        <img src="../assets/category-bags-accessories.svg" alt="Bags and Accessories">
+      </a>
+      <a class="category-card tile-light" href="category-home-products.html">
+        <div class="tile-text">
+          <h3>Home Products</h3>
+          <p>Handmade storage, cleaning products, candles, and house slippers for a greener home.</p>
+          <span class="tile-actions"><span class="tile-btn">Shop now</span><span class="tile-btn tile-btn-outline">Low-Waste</span></span>
+        </div>
+        <img src="../assets/category-home-products.svg" alt="Home Products">
+      </a>
+      <a class="category-card tile-mint" href="category-gardening-plants.html">
+        <div class="tile-text">
+          <h3>Gardening and Plants</h3>
+          <p>Seed paper, plant pots, and organic fertilizer for growing a greener space.</p>
+          <span class="tile-actions"><span class="tile-btn">Shop now</span><span class="tile-btn tile-btn-outline">Organic</span></span>
+        </div>
+        <img src="../assets/category-gardening-plants.svg" alt="Gardening and Plants">
+      </a>
+      <a class="category-card tile-dark" href="category-school-office.html">
+        <div class="tile-text">
+          <h3>School and Office</h3>
+          <p>Pencil cases, rulers, and bamboo pencils made from low-waste materials.</p>
+          <span class="tile-actions"><span class="tile-btn">Shop now</span><span class="tile-btn tile-btn-outline">Recycled</span></span>
+        </div>
+        <img src="../assets/category-school-office.svg" alt="School and Office">
+      </a>
+    </div>
+
+  </article>
+
+      <!-- Shop Sustainably heading + tagline, kept together as one block -->
+    <div class="categories-hero">
+      <h1>Shop Sustainably, Live Responsibly</h1>
+      <p>Handmade, reusable, and low-waste goods from Filipino makers nationwide.</p>
+    </div>
+
+  <!-- ONE shared background (assets/home-bg.svg) behind Featured, Recommendations and Everyday Essentials -->
+  <div class="home-bg-band">
+  <!-- =========================================================
+       Featured Products: 3 "clay slide" cards (layout based on the 3D Clay reference)
+       ========================================================= -->
+  <section class="feat-band" id="featured" aria-label="Featured products">
+    <div class="feat-head">
+      <h2><span>Featured</span> <strong>Products</strong></h2>
+      <p>Three handpicked favorites from our Filipino makers.</p>
+    </div>
+    <div class="feat-list">
+      <article class="feat-slide">
+        <div class="feat-copy">
+          <span class="feat-pill"><i aria-hidden="true"></i>Handwoven · Plastic-free</span>
+          <h3 class="feat-title"><span>Handwoven</span> <strong class="feat-accent">Rattan Storage.</strong></h3>
+          <p class="feat-lead">Handwoven rattan organizers for a tidy, plastic-free home.</p>
+          <div class="feat-buy">
+            <p class="feat-price"><del>₱650</del> <ins>₱585</ins></p>
+            <a class="feat-btn" href="category-home-products.html#rattan-storage-boxes">Buy</a>
+          </div>
+        </div>
+        <div class="feat-visual">
+          <div class="feat-frame">
+            <img src="../assets/rattan-storage-boxes.png" alt="Rattan Storage Boxes">
+          </div>
+          <div class="feat-cert">
+            <span class="feat-certcheck" aria-hidden="true">&#10003;</span>
+            <span><small>Now on sale</small><strong>10% off</strong></span>
+          </div>
+        </div>
+      </article>
+      <article class="feat-slide feat-slide-rev">
+        <div class="feat-copy">
+          <span class="feat-pill"><i aria-hidden="true"></i>Biodegradable · Self-care</span>
+          <h3 class="feat-title"><span>Bamboo</span> <strong class="feat-accent">Toothbrush Set.</strong></h3>
+          <p class="feat-lead">Biodegradable bamboo handles with charcoal-infused bristles, a natural self-care essential.</p>
+          <div class="feat-buy">
+            <p class="feat-price">₱150</p>
+            <a class="feat-btn" href="category-personal-care.html#bamboo-toothbrush">Buy</a>
+          </div>
+        </div>
+        <div class="feat-visual">
+          <div class="feat-frame">
+            <img src="../assets/bamboo-toothbrush.png" alt="Bamboo Toothbrush Set">
+          </div>
+          <div class="feat-cert">
+            <span class="feat-certcheck" aria-hidden="true">&#10003;</span>
+            <span><small>Bamboo handle</small><strong>Biodegradable</strong></span>
+          </div>
+        </div>
+      </article>
+      <article class="feat-slide">
+        <div class="feat-copy">
+          <span class="feat-pill"><i aria-hidden="true"></i>Coco coir · Seedlings</span>
+          <h3 class="feat-title"><span>Grow with</span> <strong class="feat-accent">Plant Pots.</strong></h3>
+          <p class="feat-lead">Biodegradable coco coir pots for starting seedlings without plastic waste.</p>
+          <div class="feat-buy">
+            <p class="feat-price">₱180</p>
+            <a class="feat-btn" href="category-gardening-plants.html#plant-pots">Buy</a>
+          </div>
+        </div>
+        <div class="feat-visual">
+          <div class="feat-frame">
+            <img src="../assets/plant-pots.png" alt="Biodegradable Plant Pots">
+          </div>
+          <div class="feat-cert">
+            <span class="feat-certcheck" aria-hidden="true">&#10003;</span>
+            <span><small>Made from</small><strong>Coco coir</strong></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       Main content
+       ========================================================= -->
+  <!-- Recommendations + Everyday Essentials share ONE background image (assets/reco-essen-bg.png) -->
+  <section class="reco-essen-band">
+  <main>
+    <article id="recommendation">
+      <h2><strong>Recommendations</strong></h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-visual"><img src="../assets/rattan-storage-boxes.png" alt="Rattan Storage Boxes"><span class="card-badge card-badge-pink">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Rattan</span><strong>Storage Boxes</strong></h3>
+            <p>Handwoven rattan organizers for a tidy, plastic-free home.</p>
+            <p class="price"><del>₱650</del> <ins>₱585</ins></p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#rattan-storage-boxes">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/cleaning-products.png" alt="Natural Cleaning Products"><span class="card-badge card-badge-orange">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Natural</span><strong>Cleaning Products</strong></h3>
+            <p>Plant-based cleaning essentials in refillable containers.</p>
+            <p class="price">₱250</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#cleaning-products">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/slippers.png" alt="Handmade House Slippers"><span class="card-badge card-badge-green">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Handmade</span><strong>House Slippers</strong></h3>
+            <p>Soft woven house slippers made from local natural fibers.</p>
+            <p class="price">₱299</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#slippers">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/bamboo-pens.png" alt="Bamboo Pens Set"><span class="card-badge card-badge-pink">School &amp; Office</span></div>
+          <div class="card-copy">
+            <h3><span>Bamboo</span><strong>Pens Set</strong></h3>
+            <p>Set of pens with bamboo bodies instead of plastic.</p>
+            <p class="price">₱95</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-school-office.html#bamboo-pens">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/plant-pots.png" alt="Biodegradable Plant Pots"><span class="card-badge card-badge-orange">Garden</span></div>
+          <div class="card-copy">
+            <h3><span>Biodegradable</span><strong>Plant Pots</strong></h3>
+            <p>Coco coir pots for starting seedlings without plastic waste.</p>
+            <p class="price">₱180</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-gardening-plants.html#plant-pots">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="essentials">
+      <h2><span>Everyday</span> <strong>Essentials</strong></h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-visual"><img src="../assets/bamboo-toothbrush.png" alt="Bamboo Toothbrush Set"><span class="card-badge card-badge-green">Personal Care</span></div>
+          <div class="card-copy">
+            <h3><span>Bamboo</span><strong>Toothbrush Set</strong></h3>
+            <p>Biodegradable bamboo handles with charcoal-infused bristles.</p>
+            <p class="price">₱150</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-personal-care.html#bamboo-toothbrush">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/reusable-totebag.png" alt="Reusable Tote Bag"><span class="card-badge card-badge-pink">Bags</span></div>
+          <div class="card-copy">
+            <h3><span>Reusable</span><strong>Tote Bag</strong></h3>
+            <p>Sturdy everyday tote made from upcycled canvas offcuts.</p>
+            <p class="price">₱350</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-bags-accessories.html#reusable-tote-bag">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/soy-wax-candles.png" alt="Soy Wax Candles"><span class="card-badge card-badge-orange">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Soy</span><strong>Wax Candles</strong></h3>
+            <p>Hand-poured soy candles in reusable glass jars.</p>
+            <p class="price">₱350</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#soy-wax-candles">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/cleaning-products.png" alt="Natural Cleaning Products"><span class="card-badge card-badge-green">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Natural</span><strong>Cleaning Products</strong></h3>
+            <p>Plant-based cleaning essentials in refillable containers.</p>
+            <p class="price">₱250</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#cleaning-products">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-visual"><img src="../assets/reusable-straw.png" alt="Reusable Straw Set"><span class="card-badge card-badge-pink">Home</span></div>
+          <div class="card-copy">
+            <h3><span>Reusable</span><strong>Straw Set</strong></h3>
+            <p>Stainless steel straws with a cleaning brush, packed in a cloth pouch.</p>
+            <p class="price">₱199</p>
+            <div class="card-actions">
+              <a class="card-btn card-btn-secondary" href="category-home-products.html#reusable-straw">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  </section>
+  </div>
+
+
+  <!-- Did You Know? quiz: 3 random questions out of 5 (see js/trivia.js), progress + coupon saved in localStorage.
+       The buttons inside #triviaChoices are built by trivia.js; the spans below are only a no-JavaScript fallback. -->
+  <section class="trivia-band" aria-label="Sustainability quiz">
+    <aside id="trivia">
+      <h2>Did You Know?</h2>
+      <p id="triviaQuestion">Question 1 of 3: Which of these can be used again and again?</p>
+      <div id="triviaChoices" class="trivia-choices">
+        <span class="trivia-choice">Plastic straw</span>
+        <span class="trivia-choice">Reusable tote bag</span>
+        <span class="trivia-choice">Paper cup</span>
+      </div>
+      <div class="trivia-foot">
+        <p id="triviaFeedback" class="trivia-feedback" aria-live="polite"></p>
+        <div id="triviaActions" class="trivia-actions"></div>
+      </div>
+    </aside>
+  </section>
+
+
+  <!-- =========================================================
+       Testimonials (reveal on hover/click, per provided demo pattern)
+       ========================================================= -->
+  <article id="testimonials">
+    <h2>Voices from Our Community</h2>
+    <p class="section-intro">Real stories from the shoppers and makers who make LikhaLuntian possible. Hover or tap a photo to read their story.</p>
+
+    <div class="testimonial-grid">
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-angelica.png" alt="Angelica Reyes" width="170" height="230">
+        <span class="testimonial-name">Angelica Reyes</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-angelica.png" alt="Angelica Reyes" width="100" height="135">
+          <q class="label">I switched my whole bathroom to LikhaLuntian's personal care line. Months later, the bamboo toothbrush and wooden comb still look brand new, and I love that every peso goes straight to a small maker.</q>
+          <span class="testimonial-role"><cite>Angelica Reyes</cite> &middot; Customer &middot; Makati City</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-ramon.png" alt="Ramon Bautista" width="170" height="230">
+        <span class="testimonial-name">Ramon Bautista</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-ramon.png" alt="Ramon Bautista" width="100" height="135">
+          <q class="label">Before LikhaLuntian, our vermicompost only sold within Cavite. Now orders come from all over the country, and I've been able to hire two more people from our barangay to help on the farm.</q>
+          <span class="testimonial-role"><cite>Ramon Bautista</cite> &middot; Farmer &middot; Cavite Vermi Farms</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-marites.png" alt="Marites Villanueva" width="170" height="230">
+        <span class="testimonial-name">Marites Villanueva</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-marites.png" alt="Marites Villanueva" width="100" height="135">
+          <q class="label">Weaving abaca bags used to mean selling only to neighbors and the town market. Through LikhaLuntian, our cooperative now ships our bags to shoppers we'll probably never meet, and that keeps our tradition alive.</q>
+          <span class="testimonial-role"><cite>Marites Villanueva</cite> &middot; Weaver &middot; Bicol Weaving Cooperative</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-jericho.png" alt="Jericho Salazar" width="170" height="230">
+        <span class="testimonial-name">Jericho Salazar</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-jericho.png" alt="Jericho Salazar" width="100" height="135">
+          <q class="label">I was skeptical about ordering handmade goods online, but the tote bag and pencil case I got were sturdier than anything I've bought in a mall. Knowing the maker's name on the listing makes it feel personal.</q>
+          <span class="testimonial-role"><cite>Jericho Salazar</cite> &middot; Customer &middot; Batangas City</span>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- =========================================================
+       Newsletter
+       ========================================================= -->
+  <article id="newsletter" class="newsletter-signup">
+    <h2>Get 10% Off Your First Order</h2>
+    <p>Sign up for maker spotlights, restock alerts, and the occasional good deal &mdash; no spam, just green living tips from LikhaLuntian.</p>
+
+    <form method="GET" action="http://localhost/echo.py" class="newsletter-form">
+      <input type="email" name="Email" id="newsletterEmail"
+             placeholder="Your email address" aria-label="Email address" required>
+      <input type="submit" value="Get My 10% Off" class="btn-submit">
+    </form>
+
+    <ul class="newsletter-perks">
+      <li>10% off your first order</li>
+      <li>New maker announcements</li>
+      <li>Early access to seasonal drops</li>
+    </ul>
+  </article>
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+      <div class="social-map-wrap footer-social">
+        <img src="../assets/social-icons.png" alt="Social media icons" class="social-map">
+        <a class="social-hotspot hotspot-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"></a>
+        <a class="social-hotspot hotspot-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"></a>
+        <a class="social-hotspot hotspot-contact" href="about.html#contact" title="Call or contact us" aria-label="Call or contact us"></a>
+        <a class="social-hotspot hotspot-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"></a>
+        <a class="social-hotspot hotspot-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok"></a>
+        <a class="social-hotspot hotspot-x" href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X" aria-label="X"></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+
+      <!-- Straight-line logo strip -->
+  <div class="logo-strip" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       Scripts
+       ========================================================= -->
+  <script>
+    function showkey(e) {
+      if (e.keyCode === 76 || e.keyCode === 108) {
+        alert('Fun fact: every LikhaLuntian seller is based right here in the Philippines!');
+      } else if (e.keyCode === 89 || e.keyCode === 121) {
+        alert('You found a secret! Use code LUNTIANYES for 5% off your next order.');
+      }
+    }
+    document.onkeydown = showkey;
+  </script>
+  <script src="../js/script.js"></script>
+  <script src="../js/trivia.js"></script>
+  <script>
+    /* Recommendations + Everyday Essentials: expanding-panel carousel.
+       One card is open (.is-active); click, tap, or press Enter/Space on another card to open it.
+       The first card of each row starts open. */
+    (function () {
+      var rows = document.querySelectorAll("#recommendation .card-container, #essentials .card-container");
+      for (var r = 0; r < rows.length; r++) {
+        (function (row) {
+          var cards = row.querySelectorAll(".card");
+          if (!cards.length) return;
+          function open(card) {
+            for (var i = 0; i < cards.length; i++) {
+              var on = cards[i] === card;
+              cards[i].classList.toggle("is-active", on);
+              if (on) cards[i].setAttribute("aria-current", "true"); else cards[i].removeAttribute("aria-current");
+            }
+          }
+          for (var c = 0; c < cards.length; c++) {
+            (function (card) {
+              var h = card.querySelector("h3");
+              card.setAttribute("tabindex", "0");
+              card.setAttribute("role", "group");
+              if (h) card.setAttribute("aria-label", h.textContent.replace(/\s+/g, " ").trim());
+              card.addEventListener("click", function () { if (!card.classList.contains("is-active")) open(card); });
+              card.addEventListener("keydown", function (e) {
+                if (e.target !== card) return;
+                if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(card); }
+                else if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); var n = card.nextElementSibling; if (n && n.classList.contains("card")) { open(n); n.focus(); } }
+                else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); var p = card.previousElementSibling; if (p && p.classList.contains("card")) { open(p); p.focus(); } }
+              });
+            })(cards[c]);
+          }
+          open(cards[0]);
+        })(rows[r]);
+      }
+    })();
+  </script>
+<script>(function(){var map={about:"home",shop:"categories"};var key=new URLSearchParams(location.search).get("section");var id=map[key];if(id){document.addEventListener("DOMContentLoaded",function(){var el=document.getElementById(id);if(el)el.scrollIntoView();});}})();</script>
+</body>
+</html>

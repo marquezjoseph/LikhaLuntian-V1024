@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categories: LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-categories">
+
+<p class="skip-link go-to-bottom"><a href="#btm">&darr; Go to bottom</a></p>
+
+<div class="announce-bar">
+  <marquee>Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+</div>
+
+<nav class="global-nav">
+  <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+    <a href="about.html">About</a>
+    <a href="categories.html">Shop</a>
+    <a href="forms.html">Portal</a>
+    <a href="forms.html#user-login">Log-in/Sign-up</a>
+    <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+      <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+    </form>
+    <div class="nav-cart" id="navCart">
+      <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+        <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+        <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+      </button>
+      <div class="nav-cart-dropdown" id="navCartDropdown">
+        <h4>Your Cart</h4>
+        <ul class="nav-cart-items" id="navCartItems">
+          <li class="nav-cart-empty">Your cart is empty.</li>
+        </ul>
+        <div class="nav-cart-footer">
+          <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+          <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     Image Slideshow (Top Banner, inner pages): same 3 slides, "-other" images
+     Rotates every 3 seconds via script.js
+     ========================================================= -->
+<header>
+<section class="image-slideshow" id="image-slideshow" aria-label="Featured LikhaLuntian banners">
+  <img src="../assets/download-now-other.png" alt="Download the LikhaLuntian app" class="slide is-active">
+  <img src="../assets/visit-banner-other.png" alt="Visit LikhaLuntian" class="slide">
+  <img src="../assets/intro-banner-other.png" alt="Introduction to LikhaLuntian" class="slide">
+</section>
+</header>
+
+<main>
+  <article id="categories">
+    <a class="back-link" href="homepage.html">&larr; Back to home</a>
+        <h2>Shop by Category</h2>
+    <p>Browse LikhaLuntian products grouped by what you need - from personal care to school and office finds.</p>
+
+    <div class="chip-row">
+      <a class="chip" href="category-personal-care.html"><span class="chip-tag">Natural</span>Personal Care</a>
+      <a class="chip" href="category-bags-accessories.html"><span class="chip-tag">Reusable</span>Bags &amp; Accessories</a>
+      <a class="chip" href="category-home-products.html"><span class="chip-tag">Low-Waste</span>Home Products</a>
+      <a class="chip" href="category-gardening-plants.html"><span class="chip-tag">Organic</span>Gardening &amp; Plants</a>
+      <a class="chip" href="category-school-office.html"><span class="chip-tag">Recycled</span>School &amp; Office</a>
+    </div>
+
+    <div class="category-grid category-grid-row">
+      <a class="category-card" href="category-personal-care.html">
+        <img src="../assets/category-personal-care.svg" alt="Personal Care">
+        <h3>Personal Care</h3>
+        <p>Natural self-care essentials like wooden combs, bamboo toothbrushes, and handmade soap.</p>
+      </a>
+      <a class="category-card" href="category-bags-accessories.html">
+        <img src="../assets/category-bags-accessories.svg" alt="Bags and Accessories">
+        <h3>Bags and Accessories</h3>
+        <p>Reusable abaca bags, paper bags, and everyday totes made by local artisans.</p>
+      </a>
+      <a class="category-card" href="category-home-products.html">
+        <img src="../assets/category-home-products.svg" alt="Home Products">
+        <h3>Home Products</h3>
+        <p>Handmade storage, cleaning products, candles, and house slippers for a greener home.</p>
+      </a>
+      <a class="category-card" href="category-gardening-plants.html">
+        <img src="../assets/category-gardening-plants.svg" alt="Gardening and Plants">
+        <h3>Gardening and Plants</h3>
+        <p>Seed paper, plant pots, and organic fertilizer for growing a greener space.</p>
+      </a>
+      <a class="category-card" href="category-school-office.html">
+        <img src="../assets/category-school-office.svg" alt="School and Office">
+        <h3>School and Office</h3>
+        <p>Pencil cases, rulers, and bamboo pencils made from low-waste materials.</p>
+      </a>
+    </div>
+  </article>
+</main>
+
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+      <div class="social-map-wrap footer-social">
+        <img src="../assets/social-icons.png" alt="Social media icons" class="social-map">
+        <a class="social-hotspot hotspot-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"></a>
+        <a class="social-hotspot hotspot-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"></a>
+        <a class="social-hotspot hotspot-contact" href="about.html#contact" title="Call or contact us" aria-label="Call or contact us"></a>
+        <a class="social-hotspot hotspot-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"></a>
+        <a class="social-hotspot hotspot-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok"></a>
+        <a class="social-hotspot hotspot-x" href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X" aria-label="X"></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+<script src="../js/script.js"></script>
+</body>
+</html>

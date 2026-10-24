@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About LikhaLuntian</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clay.css">
+</head>
+<body id="top" class="clay-home clay-about">
+
+<p class="skip-link go-to-bottom"><a href="#btm">&darr; Go to bottom</a></p>
+
+<div class="announce-bar">
+  <marquee>Free delivery in BALAYAN on orders over ₱1,500 &nbsp;|&nbsp; Every maker vetted by hand &nbsp;|&nbsp; Ships low-waste, always</marquee>
+</div>
+
+<nav class="global-nav">
+  <a class="nav-brand" href="homepage.html">LikhaLuntian</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinksList">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinksList">
+    <a href="about.html">About</a>
+    <a href="categories.html">Shop</a>
+    <a href="forms.html">Portal</a>
+    <a href="forms.html#user-login">Log-in/Sign-up</a>
+    <a href="account.html">My Account</a>
+    <form class="nav-search" method="GET" action="http://localhost/echo.py" role="search">
+      <input type="search" name="Search" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" class="nav-search-btn" aria-label="Search"><img class="nav-search-logo" src="../assets/logo-search.png" alt="" aria-hidden="true"></button>
+    </form>
+    <div class="nav-cart" id="navCart">
+      <button type="button" class="nav-cart-btn" id="navCartBtn" aria-haspopup="true" aria-expanded="false" aria-label="View cart">
+        <img class="nav-cart-logo" src="../assets/logo-cart.png" alt="" aria-hidden="true">
+        <span class="nav-cart-count" id="navCartCount" hidden>0</span>
+      </button>
+      <div class="nav-cart-dropdown" id="navCartDropdown">
+        <h4>Your Cart</h4>
+        <ul class="nav-cart-items" id="navCartItems">
+          <li class="nav-cart-empty">Your cart is empty.</li>
+        </ul>
+        <div class="nav-cart-footer">
+          <span class="nav-cart-total">Total: <strong id="navCartTotal">₱0</strong></span>
+          <button type="button" class="nav-cart-clear" id="navCartClear">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- scroll anchor kept for ?section=about; styled to nothing in clay.css -->
+<div id="home"></div>
+
+<section class="about-bg">
+  <div class="abt">
+
+    <!-- Hero: copy on the left, framed picture on the right -->
+    <div class="abt-hero">
+      <div class="abt-copy">
+        <a class="back-link" href="homepage.html">&larr; Back to home</a>
+        <span class="abt-badge"><i aria-hidden="true"></i>Made in the Philippines &middot; Made green</span>
+        <h2>About <span class="abt-accent">LikhaLuntian.</span></h2>
+        <p class="abt-lead">
+          Our name comes from two Filipino words:
+          <ruby>Likha<rt>ᜎᜒᜃ᜔ᜑ</rt></ruby> and
+          <ruby>Luntian<rt>ᜎᜓᜈ᜔ᜆᜒᜀᜈ᜔</rt></ruby>.
+          Together they describe <em>something made, made green</em>.
+        </p>
+        <div class="abt-actions">
+          <a class="abt-btn abt-btn-primary" href="categories.html">Shop Sustainably</a>
+          <a class="abt-btn abt-btn-soft" href="#" id="toggle-story">Read more about our story &darr;</a>
+        </div>
+      </div>
+
+      <div class="abt-visual">
+        <div class="abt-frame">
+          <img src="../assets/quick-facts-left.png" alt="Local makers weaving">
+        </div>
+        <div class="abt-cert">
+          <span class="abt-check" aria-hidden="true">&#10003;</span>
+          <span><small>Locally made</small><strong>100% Filipino</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <p id="ourStory" class="abt-story" style="display:none;">
+      LikhaLuntian started as a small Batangas-based effort to connect local makers
+      who were already working sustainably with shoppers looking for better everyday
+      alternatives. What began as a handful of sellers has grown into a marketplace
+      built entirely around one promise: nothing sold here costs the planet more than
+      it gives back.
+    </p>
+
+    <!-- Our Sustainable Material Stacks: same layout as the About hero (copy left, framed picture + badge right; alternates) -->
+    <div class="abt-section abt-mats">
+      <div class="abt-head abt-head-mat">
+        <h3><span>Our Sustainable</span> <strong>Material Stacks</strong></h3>
+        <p class="abt-sub">The materials we favour and the hands that shape them.</p>
+      </div>
+      <div class="mat-list">
+        <figure class="mat-slide" id="front-stack">
+          <div class="mat-copy">
+            <span class="abt-badge"><i aria-hidden="true"></i>Abaca &middot; Rattan</span>
+            <h4 class="mat-title"><span>Natural</span> <strong class="mat-accent">Fibers.</strong></h4>
+            <p class="mat-lead">Natural fibers like abaca and rattan form the foundation of our bags and home goods. They are harvested sustainably by local communities and woven into durable, biodegradable products that replace single-use plastics.</p>
+            <ul class="mat-checks"><li><span class="mat-check is-hot"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Abaca and rattan</li><li><span class="mat-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Harvested sustainably by local communities</li><li><span class="mat-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Durable, biodegradable, replaces single-use plastics</li></ul>
+          </div>
+          <div class="mat-visual">
+            <div class="mat-frame">
+              <img src="../assets/figure-front.png" alt="Natural Fibers" width="160" height="145">
+            </div>
+            <div class="abt-cert mat-cert">
+              <span class="abt-check" aria-hidden="true">&#10003;</span>
+              <span><small>Harvested by</small><strong>Local communities</strong></span>
+            </div>
+          </div>
+        </figure>
+        <figure class="mat-slide mat-slide-rev" id="back-stack">
+          <div class="mat-copy">
+            <span class="abt-badge"><i aria-hidden="true"></i>Weaving &middot; Woodcarving</span>
+            <h4 class="mat-title"><span>Local</span> <strong class="mat-accent">Craftsmanship.</strong></h4>
+            <p class="mat-lead">Behind every product is the skilled craftsmanship of Filipino makers. From Cebu woodcrafters to Bicol weavers, our network supports local livelihoods and preserves traditional techniques for future generations.</p>
+            <ul class="mat-checks"><li><span class="mat-check is-hot"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Weaving and woodcarving</li><li><span class="mat-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Supports local livelihoods</li><li><span class="mat-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Preserves traditional techniques</li></ul>
+          </div>
+          <div class="mat-visual">
+            <div class="mat-frame">
+              <img src="../assets/figure-back.png" alt="Local Craftsmanship" width="160" height="128">
+            </div>
+            <div class="abt-cert mat-cert">
+              <span class="abt-check" aria-hidden="true">&#10003;</span>
+              <span><small>Supporting</small><strong>Local livelihoods</strong></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <!-- What Likha and Luntian Stand For: same hero layout (copy left, framed list + badge right) -->
+    <div class="abt-section abt-defs-hero">
+      <div class="def-hero">
+        <div class="def-copy">
+          <span class="abt-badge"><i aria-hidden="true"></i>Five ideas &middot; One promise</span>
+          <h3 class="def-title"><span>What Likha and Luntian</span> <strong class="def-accent">Stand For</strong></h3>
+          <p class="def-lead">Five ideas behind every product we list.</p>
+          <div class="abt-actions">
+            <a class="abt-btn abt-btn-primary" href="categories.html">Shop Sustainably</a>
+          </div>
+        </div>
+        <div class="def-visual">
+          <div class="def-frame">
+            <dl class="def-list">
+            <div class="def-item"><dt><span class="def-icon i-orange" aria-hidden="true">&#9998;</span><dfn><strong>Likha</strong></dfn></dt><dd>means something made - a craft, a creation, a livelihood.</dd></div>
+            <div class="def-item"><dt><span class="def-icon i-teal" aria-hidden="true">&#10047;</span><dfn><strong>Luntian</strong></dfn></dt><dd>means green. Every seller here meets one bar: reusable, low-waste, or locally produced.</dd></div>
+            <div class="def-item"><dt><span class="def-icon i-pink" aria-hidden="true">&#9851;</span><dfn><span>Sustainably</span> <strong>sourced</strong></dfn></dt><dd>Materials and ingredients chosen for <strong>low environmental impact</strong>.</dd></div>
+            <div class="def-item"><dt><span class="def-icon i-orange" aria-hidden="true">&#9906;</span><dfn><span>Locally</span> <strong>made</strong></dfn></dt><dd>Every item comes from a maker based in the <em>Philippines</em>.</dd></div>
+            <div class="def-item"><dt><span class="def-icon i-teal" aria-hidden="true">&#9825;</span><dfn><span>Honestly</span> <strong>priced</strong></dfn></dt><dd>Fair prices for both makers and shoppers, with <strong>no hidden markups</strong>.</dd></div>
+            </dl>
+          </div>
+          <div class="abt-cert def-cert">
+            <span class="abt-check" aria-hidden="true">&#10003;</span>
+            <span><small>Our promise</small><strong>Made green</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<main>
+  <article id="how-to-shop" class="flush-bottom">
+    <div class="how-to-shop-grid">
+      <div class="how-to-shop-card">
+        <img src="../assets/how-to-shop.png" alt="How to Shop" class="how-to-shop-image">
+        <div class="how-to-shop-text">
+          <h2>How to Shop</h2>
+          <ol>
+            <li>Browse a category and pick something you need.</li>
+            <li>Open the product to see the maker and full details.</li>
+            <li>Reach out through the maker's listed contact to place your order.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="how-to-shop-card" id="why-shop">
+        <img src="../assets/why-shop-with-us.png" alt="Why Shop With Us" class="how-to-shop-image">
+        <div class="how-to-shop-text">
+          <h3>Why Shop With Us</h3>
+          <ul>
+            <li>Every seller is based in the Philippines.</li>
+            <li>All goods are reusable, low-waste, or locally produced.</li>
+            <li>Fair prices for makers and shoppers alike.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  </main>
+
+  <!-- Quick Facts band: full-width, image on the left (1/3), details on the right (2/3) -->
+  <section class="facts-band flush-top" aria-label="Quick facts and care tips">
+    <div class="facts-inner">
+      <div class="facts-video">
+        <img src="../assets/quick-facts-left.png" alt="Local makers weaving">
+      </div>
+
+      <div class="facts-details">
+        <p>Quick Facts About LikhaLuntian</p>
+        <aside>
+          <table class="facts-table">
+            <thead>
+              <tr><th>Fact</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Based in</td><td>Balayan, Batangas, Philippines</td></tr>
+              <tr><td>Known for</td><td>Reusable goods, handmade crafts, sustainable living</td></tr>
+              <tr><td>Community</td><td>Local Filipino makers nationwide</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">All facts current as of 2026</td></tr>
+            </tfoot>
+          </table>
+        </aside>
+
+        <h3>General Care Tips</h3>
+        <pre>
+Rinse and air-dry natural fiber items
+Keep wood and rattan pieces out of direct sun
+Store fabric bags flat when not in use
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       See how it's made
+       ========================================================= -->
+  <section class="made-section" aria-labelledby="madeTitle">
+    <div class="made-grid">
+      <!-- Right half: video (placed on the right by CSS order) -->
+      <div class="made-video">
+        <video controls preload="metadata">
+          <source src="../assets/likhaluntian-makers.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Left half: See How It's Made details -->
+      <div class="made-info">
+        <h2 id="madeTitle">See How It's Made</h2>
+        <p class="made-intro">A short look inside the workshops and farms behind LikhaLuntian products.</p>
+
+        <h3>From Workshop to Your Doorstep</h3>
+        <p>Every LikhaLuntian product starts with a Filipino maker and a natural, low-waste material. The video follows that journey so you can see who made your purchase and how.</p>
+
+        <h3>What You'll See</h3>
+        <ul>
+          <li><strong>Sourcing:</strong> plant-based and recycled materials such as bamboo, abaca, rattan and paper, gathered close to home.</li>
+          <li><strong>Handcrafting:</strong> artisans weaving, shaping, pouring and assembling each piece by hand.</li>
+          <li><strong>Quality checks:</strong> every maker is vetted by hand before their products reach the shelf.</li>
+          <li><strong>Low-waste packing:</strong> orders are packed with minimal, reusable or recyclable materials.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Original sidebar with the iframe, unchanged -->
+  <article class="sidebar">
+    <p>Additional info about the video</p>
+
+    <div class="maker-spotlight-container">
+      <article class="maker-text">
+        <h3>Why Eco-Friendly Products Are Important for Business Growth</h3>
+        <p>Shoppers increasingly want to buy from businesses that share their values. Eco-friendly products cut waste and emissions, build a trusted reputation, and can save money over time because they last longer. Switching to sustainable materials is good for the planet and good for growth.</p>
+      </article>
+      <aside class="maker-video">
+        <iframe src="https://eco-reusable.com/why-eco-friendly-products-are-important-for-business-growth-today/" title="Why Eco-Friendly Products Are Important for Business Growth Today"></iframe>
+      </aside>
+    </div>
+  </article>
+
+  <!-- Contact Us band: same look as Quick Facts (background, white-lined table) -->
+  <section class="facts-band contact-band" id="contact" aria-labelledby="contactLabel">
+    <div class="facts-inner">
+      <div class="facts-details">
+        <p id="contactLabel">Contact Us</p>
+        <aside>
+          <table class="facts-table">
+            <thead>
+              <tr><th>Contact</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Based in</td><td>Balayan, Batangas, Philippines</td></tr>
+              <tr><td>We deliver to</td><td>NCR and Batangas</td></tr>
+              <tr><td>Questions &amp; requests</td><td><a href="forms.html#shopper-requests">Send us a message</a></td></tr>
+              <tr><td>Suggest a local maker</td><td><a href="forms.html#shopper-requests">Use the request form</a></td></tr>
+              <tr><td>Contact no.</td><td><a href="tel:09121231234">09121231234</a></td></tr>
+              <tr><td>E-mail</td><td><a href="mailto:likhaluntian@gmail.com">likhaluntian@gmail.com</a></td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">Use the form for product requests, restocks, maker suggestions and website feedback</td></tr>
+            </tfoot>
+          </table>
+        </aside>
+      </div>
+
+      <div class="contact-photo">
+        <img src="../assets/contact-us.png" alt="Contact LikhaLuntian">
+      </div>
+    </div>
+  </section>
+
+  <section class="vetting-band">
+    <video class="vetting-video-bg" autoplay muted loop playsinline preload="auto" poster="../assets/category-home-products.png">
+      <source src="../assets/vetted-bg.mp4" type="video/mp4">
+    </video>
+    <div class="vetting-inner">
+    <article id="vetting">
+      <h2>Vetted. Valued. Trusted.</h2>
+      <p class="section-intro">We don't list every "eco-friendly" find we come across. Every maker on LikhaLuntian is checked by hand against three pillars before their goods go up for sale.</p>
+      <div class="pillar-grid" id="pillarGrid">
+        <div class="pillar" style="--pillar-img: url('../assets/bamboo-toothbrush.png');" tabindex="0">
+          <span class="pillar-number">01.</span>
+          <div class="pillar-bottom">
+            <div class="pillar-detail">
+              <p>Natural, recycled, or upcycled materials — abaca, rattan, bamboo, coco coir — favoured over plastic in every product we list.</p>
+            </div>
+            <h3>Materials</h3>
+          </div>
+        </div>
+        <div class="pillar" style="--pillar-img: url('../assets/testimonial-marites.png');" tabindex="0">
+          <span class="pillar-number">02.</span>
+          <div class="pillar-bottom">
+            <div class="pillar-detail">
+              <p>Fair, honest pricing for the cooperatives and small workshops behind each item, with no hidden markups added along the way.</p>
+            </div>
+            <h3>Maker Livelihood</h3>
+          </div>
+        </div>
+        <div class="pillar" style="--pillar-img: url('../assets/reusable-totebag.png');" tabindex="0">
+          <span class="pillar-number">03.</span>
+          <div class="pillar-bottom">
+            <div class="pillar-detail">
+              <p>Shipped and wrapped with reusable, recycled, or compostable packaging — never single-use plastic.</p>
+            </div>
+            <h3>Low-Waste Packaging</h3>
+          </div>
+        </div>
+      </div>
+    </article>
+    </div>
+  </section>
+
+  <main>
+  <article id="impact">
+    <h2>Creating Impact, Together</h2>
+    <p class="section-intro">Every order on LikhaLuntian supports a Filipino maker directly and keeps waste out of Philippine landfills.</p>
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-number">120+</span>
+        <span class="stat-label">Local makers supported</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">18</span>
+        <span class="stat-label">Provinces represented</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Plastic-free shipping</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">0</span>
+        <span class="stat-label">Hidden markups, ever</span>
+      </div>
+    </div>
+  </article>
+  </main>
+
+  <!-- Story band: dark green, edge to edge. Text + audio on the left, photos edge to edge on the right -->
+  <section class="story-band" id="our-story" aria-label="Listen to the LikhaLuntian Story">
+    <div class="story-text">
+      <h2>Our Story &amp; Impact</h2>
+      <!-- Code from: Audio Player with Progress Bar (Themed) -->
+      <h3>Listen to the LikhaLuntian Story</h3>
+      <p>Hear from the local makers and farmers behind our sustainable marketplace.</p>
+      <div class="audio-player-container">
+        <audio id="snd">
+          <source src="../assets/audio.mp3" type="audio/mpeg">
+          <source src="../assets/audio.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+        <img id="ctl" src="../assets/progress-button.png" width="32" height="32" alt="Play/Pause">
+        <progress id="bar" value="0"></progress>
+        <span id="num">[Loading Audio...]</span>
+      </div>
+    </div>
+    <div class="story-images">
+      <img src="../assets/quick-facts-left.png" alt="Local makers weaving">
+    </div>
+  </section>
+
+  <!-- Terms band: PDF fills the left half of the page, text on the right -->
+  <section class="terms-band" id="terms" aria-label="2026 Terms and Conditions">
+    <div class="terms-pdf">
+      <!-- Code from: Embedded Object (PDF) (Themed) -->
+      <object data="../assets/terms-conditions.pdf" type="application/pdf" width="100%" height="100%">
+        [ PDF Document - Please install Adobe Reader to view our terms and conditions ]
+      </object>
+    </div>
+    <div class="terms-text">
+      <h3>2026 Terms and Conditions</h3>
+      <p>Understand the terms and conditions of this sustainable e-commerce website...</p>
+      <p>...together, we are making a difference for the planet and our communities.</p>
+    </div>
+  </section>
+
+  <article id="testimonials">
+    <h2>Voices from Our Community</h2>
+    <p class="section-intro">Real stories from the shoppers and makers who make LikhaLuntian possible. Hover or tap a photo to read their story.</p>
+
+    <div class="testimonial-grid">
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-angelica.png" alt="Angelica Reyes" width="170" height="230">
+        <span class="testimonial-name">Angelica Reyes</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-angelica.png" alt="Angelica Reyes" width="100" height="135">
+          <q class="label">I switched my whole bathroom to LikhaLuntian's personal care line. Months later, the bamboo toothbrush and wooden comb still look brand new, and I love that every peso goes straight to a small maker.</q>
+          <span class="testimonial-role"><cite>Angelica Reyes</cite> &middot; Customer &middot; Makati City</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-ramon.png" alt="Ramon Bautista" width="170" height="230">
+        <span class="testimonial-name">Ramon Bautista</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-ramon.png" alt="Ramon Bautista" width="100" height="135">
+          <q class="label">Before LikhaLuntian, our vermicompost only sold within Cavite. Now orders come from all over the country, and I've been able to hire two more people from our barangay to help on the farm.</q>
+          <span class="testimonial-role"><cite>Ramon Bautista</cite> &middot; Farmer &middot; Cavite Vermi Farms</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-marites.png" alt="Marites Villanueva" width="170" height="230">
+        <span class="testimonial-name">Marites Villanueva</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-marites.png" alt="Marites Villanueva" width="100" height="135">
+          <q class="label">Weaving abaca bags used to mean selling only to neighbors and the town market. Through LikhaLuntian, our cooperative now ships our bags to shoppers we'll probably never meet, and that keeps our tradition alive.</q>
+          <span class="testimonial-role"><cite>Marites Villanueva</cite> &middot; Weaver &middot; Bicol Weaving Cooperative</span>
+        </div>
+      </div>
+
+      <div class="thumbnail testimonial-thumb" tabindex="0">
+        <img src="../assets/testimonial-jericho.png" alt="Jericho Salazar" width="170" height="230">
+        <span class="testimonial-name">Jericho Salazar</span>
+        <div class="dropdown testimonial-dropdown">
+          <img src="../assets/testimonial-jericho.png" alt="Jericho Salazar" width="100" height="135">
+          <q class="label">I was skeptical about ordering handmade goods online, but the tote bag and pencil case I got were sturdier than anything I've bought in a mall. Knowing the maker's name on the listing makes it feel personal.</q>
+          <span class="testimonial-role"><cite>Jericho Salazar</cite> &middot; Customer &middot; Batangas City</span>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+  <footer id="btm">
+    <img class="footer-bg" src="../assets/footer-bg.png" alt="">
+  <div class="footer-links" id="footer-links-horizontal">
+    <div class="footer-brand">
+      <a href="homepage.html"><img src="../assets/logo.png" alt="LikhaLuntian Logo" class="footer-logo"></a>
+      <p>Shop Sustainably,<br>Support Local</p>
+      <div class="social-map-wrap footer-social">
+        <img src="../assets/social-icons.png" alt="Social media icons" class="social-map">
+        <a class="social-hotspot hotspot-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"></a>
+        <a class="social-hotspot hotspot-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"></a>
+        <a class="social-hotspot hotspot-contact" href="about.html#contact" title="Call or contact us" aria-label="Call or contact us"></a>
+        <a class="social-hotspot hotspot-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"></a>
+        <a class="social-hotspot hotspot-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok"></a>
+        <a class="social-hotspot hotspot-x" href="https://x.com/" target="_blank" rel="noopener noreferrer" title="X" aria-label="X"></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">All Categories</a></li>
+        <li><a href="category-personal-care.html">Personal Care</a></li>
+        <li><a href="category-bags-accessories.html">Bags &amp; Accessories</a></li>
+        <li><a href="category-home-products.html">Home Products</a></li>
+        <li><a href="category-gardening-plants.html">Gardening &amp; Plants</a></li>
+        <li><a href="category-school-office.html">School &amp; Office</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#our-story">Our Story &amp; Impact</a></li>
+        <li><a href="about.html#why-shop">Why Shop With Us</a></li>
+        <li><a href="about.html#testimonials">Voices from Our Community</a></li>
+        <li><a href="about.html#terms">Terms and Conditions</a></li>
+        <li><a href="about.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="For Makers">
+      <h4>For Makers</h4>
+      <ul>
+        <li><a href="forms.html#maker-login">Maker Login</a></li>
+        <li><a href="forms.html#upload-products">Upload Product Photos</a></li>
+        <li><a href="forms.html#stock-calculator">Stock Value Calculator</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Support">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="forms.html#user-login">User Login / Sign-up</a></li>
+        <li><a href="forms.html#shopper-requests">Shopper Requests</a></li>
+        <li><a href="forms.html">Maker &amp; Shopper Portal</a></li>
+        <li><a href="homepage.html?section=shop">Browse Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="footer-content">
+      Copyright &copy; 2026 LikhaLuntian. Owned by Joseph A. Marquez.
+      <p class="skip-link back-to-top"><a href="#top">&uarr; Back to top</a></p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       Scripts
+       ========================================================= -->
+  <script>
+    function showkey(e) {
+      if (e.keyCode === 76 || e.keyCode === 108) {
+        alert('Fun fact: every LikhaLuntian seller is based right here in the Philippines!');
+      } else if (e.keyCode === 89 || e.keyCode === 121) {
+        alert('You found a secret! Use code LUNTIANYES for 5% off your next order.');
+      }
+    }
+    document.onkeydown = showkey;
+  </script>
+  <script src="../js/script.js"></script>
+<script>(function(){var map={about:"home",shop:"categories"};var key=new URLSearchParams(location.search).get("section");var id=map[key];if(id){document.addEventListener("DOMContentLoaded",function(){var el=document.getElementById(id);if(el)el.scrollIntoView();});}})();</script>
+</body>
+</html>
